@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cardapio</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu da Lanchonete</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .menu-item {
+            margin-bottom: 20px;
+        }
+        .menu-item h2 {
+            margin-bottom: 5px;
+        }
+        .menu-item p {
+            margin-top: 5px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Menu</h1>
+    <div class="menu-item">
+        <h2>Hambúrguer Simples</h2>
+        <p>Delicioso hambúrguer com carne, queijo, alface, tomate e maionese - R$ 10,00</p>
+        <input type="checkbox" class="item" value="10" data-item-name="Hambúrguer Simples">
+    </div>
+    <div class="menu-item">
+        <h2>Cachorro Quente</h2>
+        <p>Pão com salsicha, molho de tomate, mostarda e ketchup - R$ 7,00</p>
+        <input type="checkbox" class="item" value="7" data-item-name="Cachorro Quente">
+    </div>
+    <div class="menu-item">
+        <h2>Batata Frita</h2>
+        <p>Porção de batatas fritas crocantes - R$ 8,00</p>
+        <input type="checkbox" class="item" value="8" data-item-name="Batata Frita">
+    </div>
+    <div class="menu-item">
+        <h2>Refrigerante</h2>
+        <p>Lata de refrigerante de sua escolha - R$ 4,00</p>
+        <input type="checkbox" class="item" value="4" data-item-name="Refrigerante">
+    </div>
+    <div class="menu-item">
+        <h2>Milkshake</h2>
+        <p>Milkshake de chocolate, morango ou baunilha - R$ 12,00</p>
+        <input type="checkbox" class="item" value="12" data-item-name="Milkshake">
+    </div>
+    <button onclick="calcularTotal()">Calcular Total</button>
+    <p id="total">Total: R$ 0,00</p>
+    <button onclick="enviarPedidoWhatsApp()">Enviar Pedido pelo WhatsApp</button>
+
+    <script>
+        function calcularTotal() {
+            var total = 0;
+            var checkboxes = document.querySelectorAll('.item:checked');
+            checkboxes.forEach(function(checkbox) {
+                total += parseFloat(checkbox.value);
+            });
+            document.getElementById('total').innerText = 'Total: R$ ' + total.toFixed(2);
+        }
+
+        function enviarPedidoWhatsApp() {
+            var total = document.getElementById('total').innerText;
+            var textoPedido = 'Meu pedido:\n\n';
+            var checkboxes = document.querySelectorAll('.item:checked');
+
+            // Loop through checked items and add their names, separated by commas
+            checkboxes.forEach(function(checkbox) {
+                var itemName = checkbox.dataset.itemName;
+                textoPedido += itemName + ', ';
+            });
+
+            // Remove the last comma and add a newline
+            textoPedido = textoPedido.slice(0, -2) + '\n';
+            textoPedido += total;
+
+            var urlWhatsApp = 'https://wa.me/5517991238319?text=' + encodeURIComponent(textoPedido);
+            window.open(urlWhatsApp, '_blank');
+        }
+    </script>
+</body>
+</html>
+
+</body>
+</html>
+
+</body>
+</html>
