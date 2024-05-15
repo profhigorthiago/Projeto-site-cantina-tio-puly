@@ -36,40 +36,75 @@
     <h1>Menu</h1>
 <div class="menu-item">
         <h2>Amendoim Torrado</h2>
-        <p>Descrição do produto - R$ 4,00</p>
+        <p>Preço - R$ 4,00</p>
         <input type="checkbox" class="item" value="4" data-item-name="Amendoim Torrado">
     </div>
 <div class="menu-item">
         <h2>Pão de Queijo</h2>
-        <p>Descrição do produto - R$ 4,50</p>
+        <p>Preço - R$ 4,50</p>
         <input type="checkbox" class="item" value="4.50" data-item-name="Pão de Queijo">
     </div>
-    <div class="menu-item">
-        <h2>Hambúrguer Simples</h2>
-        <p>Delicioso hambúrguer com carne, queijo, alface, tomate e maionese - R$ 10,00</p>
-        <input type="checkbox" class="item" value="10" data-item-name="Hambúrguer Simples">
+<div class="menu-item">
+        <h2>Pizza</h2>
+        <p>Preço - R$ 7,50</p>
+        <input type="checkbox" class="item" value="7.50" data-item-name="Pizza">
     </div>
-    <div class="menu-item">
-        <h2>Cachorro Quente</h2>
-        <p>Pão com salsicha, molho de tomate, mostarda e ketchup - R$ 7,00</p>
-        <input type="checkbox" class="item" value="7" data-item-name="Cachorro Quente">
+<div class="menu-item">
+        <h2>Empada de Palmito</h2>
+        <p>Preço - R$ 7,50</p>
+        <input type="checkbox" class="item" value="7.50" data-item-name="Empada de Palmito">
     </div>
-    <div class="menu-item">
-        <h2>Batata Frita</h2>
-        <p>Porção de batatas fritas crocantes - R$ 8,00</p>
-        <input type="checkbox" class="item" value="8" data-item-name="Batata Frita">
+<div class="menu-item">
+        <h2>Crossaint de Queijo</h2>
+        <p>Preço - R$ 8,00</p>
+        <input type="checkbox" class="item" value="8" data-item-name="Crossaint de Queijo">
     </div>
-    <div class="menu-item">
-        <h2>Refrigerante</h2>
-        <p>Lata de refrigerante de sua escolha - R$ 4,00</p>
-        <input type="checkbox" class="item" value="4" data-item-name="Refrigerante">
+<div class="menu-item">
+        <h2>Crossaint de Chocolate</h2>
+        <p>Preço - R$ 8,00</p>
+        <input type="checkbox" class="item" value="8" data-item-name="Crossaint de Chocolate">
     </div>
-    <div class="menu-item">
-        <h2>Milkshake</h2>
-        <p>Milkshake de chocolate, morango ou baunilha - R$ 12,00</p>
-        <input type="checkbox" class="item" value="12" data-item-name="Milkshake">
+<div class="menu-item">
+        <h2>Pipoca Doce</h2>
+        <p>Preço - R$ 2,50</p>
+        <input type="checkbox" class="item" value="2.50" data-item-name="Pipoca Doce">
     </div>
-    <button onclick="calcularTotal()">Calcular Total</button>
+<div class="menu-item">
+        <h2>Cookie com Gotas de Chocolate</h2>
+        <p>Preço - R$ 3,50</p>
+        <input type="checkbox" class="item" value="3.50" data-item-name="Cookie com Gotas de Chocolate">
+    </div>
+<div class="menu-item">
+        <h2>Pastelzinho de Ninho com Nutella</h2>
+        <p>Preço - R$ 4,50</p>
+        <input type="checkbox" class="item" value="4.50" data-item-name="Pastelzinho de Ninho com Nutella">
+    </div>
+<div class="menu-item">
+        <h2>Açaí Puro</h2>
+        <p>Preço - R$ 7,50</p>
+        <input type="checkbox" class="item" value="7.50" data-item-name="Açaí Puro">
+    </div>
+<div class="menu-item">
+        <h2>Açaí com Leite Ninho</h2>
+        <p>Preço - R$ 8,00</p>
+        <input type="checkbox" class="item" value="8" data-item-name="Açaí com Leite Ninho">
+    </div>
+<div class="menu-item">
+        <h2>Suco (Copo 180ml)</h2>
+        <p>Preço - R$ 3,50</p>
+        <input type="checkbox" class="item" value="3.50" data-item-name="Suco (Copo 180ml)">
+    </div>
+<div class="menu-item">
+        <h2>Suco (Garrafinha 300ml)</h2>
+        <p>Preço - R$ 5,50</p>
+        <input type="checkbox" class="item" value="5.50" data-item-name="Suco (Garrafinha 300ml)">
+    </div>
+<div class="menu-item">
+        <h2>Picolés de Frutas ou de Leite</h2>
+        <p>Preço - R$ 3,50</p>
+        <input type="checkbox" class="item" value="3.50" data-item-name="Picolés de Frutas ou de Leite">
+    </div>
+        <button onclick="calcularTotal()">Calcular Total</button>
     <p id="total">Total: R$ 0,00</p>
     <button onclick="enviarPedidoWhatsApp()">Enviar Pedido pelo WhatsApp</button>
 
@@ -98,7 +133,7 @@
             textoPedido = textoPedido.slice(0, -2) + '\n';
             textoPedido += total;
 
-            var urlWhatsApp = 'https://wa.me/5517991238319?text=' + encodeURIComponent(textoPedido);
+            var urlWhatsApp = 'https://wa.me/5517997099606?text=' + encodeURIComponent(textoPedido);
             window.open(urlWhatsApp, '_blank');
         }
     </script>
